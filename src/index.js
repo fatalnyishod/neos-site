@@ -194,3 +194,19 @@ $(document).keyup(function (e) {
     $('.popup__wrap').removeClass('active');
   }
 });
+
+$('form').on('submit', async function() {
+    event.preventDefault();
+
+    const fields = $(this).serializeArray(),
+        formData = new FormData();
+
+    for(let i in fields) {
+        formData.append(i, fields[i].value);
+    }
+
+    await fetch('http://localhost/neos-site/dist/api.php', {
+        method: 'POST',
+        body: formData
+    });
+});
