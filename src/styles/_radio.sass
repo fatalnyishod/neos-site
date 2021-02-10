@@ -7,3 +7,31 @@
     font-size: 1.1rem
     color: $accent
     transition: all .15s ease-out
+
+.radio-btn
+  border-radius: 4px
+  border: 1px solid $dark
+  &:checked + .radio-btn__label
+    background: $accent
+    color: #fff
+
+  &__label
+    display: flex
+    padding: 4px 8px 2px 8px
+    color: $accent
+
+  &__wrap
+    display: flex
+    margin: 0
+
+    & > div
+      overflow: hidden
+      &:first-child
+        .radio-btn__label
+          border: 1px solid $accent
+          border-radius: 4px 0 0 4px
+      &:last-child
+        .radio-btn__label
+          border: 1px solid $accent
+          border-left: none
+          border-radius: 0 4px 4px 0

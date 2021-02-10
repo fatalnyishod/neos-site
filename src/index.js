@@ -14,7 +14,7 @@ $(document).ready(function () {
         items: 3
       },
       896: {
-        items: 4
+        items: 3
       }
     }
   });
@@ -197,18 +197,18 @@ $(document).keyup(function (e) {
   }
 });
 
-$('form').on('submit', async function() {
-    event.preventDefault();
+$('form').on('submit', async function () {
+  event.preventDefault();
 
-    const fields = $(this).serializeArray(),
-        formData = new FormData();
+  const fields = $(this).serializeArray(),
+    formData = new FormData();
 
-    for(let i in fields) {
-        formData.append(i, fields[i].value);
-    }
+  for (let i in fields) {
+    formData.append(i, fields[i].value);
+  }
 
-    await fetch('http://localhost/neos-site/dist/api.php', {
-        method: 'POST',
-        body: formData
-    });
+  await fetch('http://localhost/neos-site/dist/api.php', {
+    method: 'POST',
+    body: formData
+  });
 });

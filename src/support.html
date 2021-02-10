@@ -17,6 +17,10 @@
         <span class="text text_light">8 812 779-13-79</span>
       </div>
       <div class="head__line"></div>
+
+      <input type="checkbox" id="mobNav" />
+      <label for="mobNav" class="head__trigger"></label>
+
       <nav class="head__nav">
         <a href="solutions.html">Решения</a>
         <a href="decree.html">Приказы</a>
@@ -40,10 +44,68 @@
   <section class="banner banner_product">
     <div class="grid banner__grid">
       <h1 class="title title_h1 title_light">
-        СОРМ IMS для фиксированной связи
+        Техподдержка
       </h1>
     </div>
   </section>
+
+  <main class="main">
+    <div class="grid main__grid">
+      <div class="main__text-block">
+        <p class="text">Техподдержка NEOS работает 24/7. Пишите и звоните нам в любой момент.</p>
+      </div>
+
+      <div class="main__item main__item_support">
+        <form class="main__content main__content_form">
+          <div class="title title_h2">Оставьте заявку</div>
+          <div class="input__wrap">
+            <label for="supportName" class="input__label">Как вас зовут</label>
+            <input type="text" name="supportName" class="input" id="supportName">
+          </div>
+
+          <div class="input__wrap">
+            <label for="supportCompany" class="input__label">Из какой вы компании</label>
+            <input type="text" name="supportCompany" class="input" id="supportCompany">
+          </div>
+
+          <div class="input__wrap">
+            <label for="supportPhone" class="input__label">Ваш телефон для ответа</label>
+            <input type="text" name="supportPhone" class="input" id="supportPhone">
+          </div>
+
+          <div class="input__wrap">
+            <label for="supportMail" class="input__label">Ваш email для ответа</label>
+            <input type="text" name="supportMail" class="input" id="supportMail">
+          </div>
+
+          <div class="input__wrap">
+            <label for="supportComment" class="input__label">Задайте ваш вопрос</label>
+            <textarea name="supportComment" class="input input_area" id="supportComment"></textarea>
+          </div>
+
+          <div class="checkbox__wrap">
+            <input type="checkbox" class="checkbox" id="supportAgree">
+            <label for="supportAgree" class="checkbox"></label>
+            <label for="supportAgree" class="checkbox__label">
+              Даю согласие на
+              <a href="terms.html">обработку данных</a>
+            </label>
+          </div>
+
+          <div>
+            <span class="text">
+              Пожалуйста, заполните все поля, чтобы мы как можно скорее смогли вам ответить
+            </span>
+          </div>
+
+          <div class="input__wrap">
+            <input class="btn btn_dark" type="submit" value="Отправить" />
+          </div>
+      </div>
+      </form>
+    </div>
+    </div>
+  </main>
 
   <footer class="footer">
     <div class="grid footer__grid">

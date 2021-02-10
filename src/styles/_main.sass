@@ -8,6 +8,16 @@
       margin: 0 0 24px 0
     .title_h3
       margin: 0 0 16px 0
+  &_product
+    .main__item_img
+      flex-direction: column
+      .main__img
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 200px
+        img
+          object-fit: contain
 
   &__item
     position: relative
@@ -16,7 +26,7 @@
     border-radius: 4px
     transition: all .15s ease-out
     box-shadow: 0px 0px 1px rgba(0, 45, 77, 0.3), 0px 3px 4px rgba(0, 45, 77, 0.05)
-    background: #fff url('../images/decree-icon.svg') no-repeat right bottom
+    background: #fff
     overflow: hidden
     &:hover
       box-shadow: 0px 0px 8px rgba(0, 45, 77, 0.05), 0px 32px 40px rgba(0, 45, 77, 0.15)
@@ -27,11 +37,19 @@
       display: flex
       padding: 0
       background: #fff
+      @media #{$phone}
+        flex-direction: column
 
       .main__img
         width: 55%
         max-height: 400px
         overflow: hidden
+        @media #{$tablet}
+          width: 50%
+          min-width: 50%
+        @media #{$phone}
+          width: 100%
+          height: 220px
         img
           width: 100%
           height: 100%
@@ -43,6 +61,11 @@
       .main__img
         width: 200%
         height: 300px
+
+    &_support
+      width: fit-content
+      @media #{$phone}
+        padding: 16px 8px
 
   &__content
     display: flex
@@ -63,12 +86,17 @@
       margin: 0 0 4px 0
     .text
       margin: 0 0 16px 0
+    &_form
+      div:not(:last-child)
+        margin-bottom: 16px
 
   &__text-block
     width: 80%
     margin: 0 0 24px 0
     p:not(:last-child)
       margin: 0 0 16px
+    @media #{$phone}
+      width: 100%
 
   &__product
     height: 120px
@@ -76,7 +104,7 @@
     border-radius: 4px
     transition: all .15s ease-out
     box-shadow: 0px 0px 1px rgba(0, 45, 77, 0.3), 0px 3px 4px rgba(0, 45, 77, 0.05)
-    background: #fff url('../images/product-icon.svg') no-repeat right bottom
+    background: #fff
     overflow: hidden
     &:hover
       box-shadow: 0px 0px 8px rgba(0, 45, 77, 0.05), 0px 32px 40px rgba(0, 45, 77, 0.15)
@@ -135,3 +163,6 @@
           display: flex
           flex-direction: column
           align-items: flex-start
+      &_yarovaya
+        .main__product
+          height: 80px
