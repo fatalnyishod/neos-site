@@ -2,16 +2,18 @@ import './styles/main.sass';
 $(document).ready(function () {
   $('.owl-carousel').owlCarousel({
     loop: true,
-    margin: 100,
-    nav: true,
+    margin: 10,
+    dots: true,
+    center: true,
+    autoplay: true,
     responsive: {
       0: {
-        items: 1
-      },
-      600: {
         items: 3
       },
-      1000: {
+      661: {
+        items: 3
+      },
+      896: {
         items: 4
       }
     }

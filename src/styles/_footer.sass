@@ -6,11 +6,13 @@
   background: $dark
   @media #{$phone}
     height: auto
+  @media #{$tablet}
+    height: auto
 
   &__grid
     display: flex
     flex-direction: column
-    height: 100%    
+    height: 100%
 
   &__wrap
     display: flex
@@ -18,6 +20,8 @@
     justify-content: space-between
     &:nth-child(3)
       margin: auto 0 0 0
+    @media #{$tablet}
+      flex-direction: column
     @media #{$phone}
       flex-direction: column
 
@@ -26,6 +30,8 @@
     flex-direction: column
     &:nth-child(1)
       width: 25%
+      @media #{$tablet}
+        width: 100%
       @media #{$phone}
         width: 100%
     &:nth-child(2)
@@ -33,15 +39,22 @@
       width: 130px
       @media #{$phone}
         width: 100%
-        padding: 16px 0 0 0 
+        padding: 16px 0 0 0
+      @media #{$tablet}
+        width: 100%
+        padding: 16px 0 0 0
     &:nth-child(3)
       padding: 40px 0 0 0
       width: 130px
+      @media #{$tablet}
+        display: none
       @media #{$phone}
         display: none
     &:nth-child(4)
       padding: 40px 0 0 0
       width: 130px
+      @media #{$tablet}
+        display: none
       @media #{$phone}
         display: none
 
@@ -66,6 +79,9 @@
     width: 100%
     height: 1px
     background: $accent
+    @media #{$tablet}
+      position: static
+      margin: 0 0 16px 0
     @media #{$phone}
       position: static
       margin: 0 0 16px 0

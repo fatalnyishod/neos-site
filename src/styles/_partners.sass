@@ -12,6 +12,9 @@
     position: relative
 
   &__item
+    display: flex
+    align-items: center
+    justify-content: center
     width: 120px
     height: 100px
     background-size: contain !important
@@ -29,23 +32,25 @@
     &_6
       background: url('../images/partners__item-6.png') no-repeat center
 
-  .owl-prev
-    span
-      position: absolute
-      top: 40px
-      right: -120px
-      width: 42px
-      height: 30px
-      background: url('../images/arrow_green.svg') no-repeat center
-      transform: rotate(-90deg)
-      color: #fff
-  .owl-next
-    span
-      position: absolute
-      top: 40px
-      left: -120px
-      width: 42px
-      height: 30px
-      background: url('../images/arrow_green.svg') no-repeat center
-      transform: rotate(90deg)
-      color: #fff
+.owl-item
+  display: flex
+  justify-content: center
+
+.owl-dots
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 200px
+  height: 8px
+  margin: 60px auto 0 auto
+  transition: all .15s ease-out
+  .owl-dot
+    margin: 0 12px 0 0
+    width: 30px
+    height: 6px
+    border-radius: 3px
+    border: 1px solid $accent !important
+    outline: none !important
+    &.active
+      background: $accent !important
+      border: 1px solid $accent
