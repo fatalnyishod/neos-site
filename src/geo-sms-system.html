@@ -5,10 +5,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
-  <title>NEOS-О нас</title>
+  <title>NEOS-Системы пассивного перехвата местоположения и SMS</title>
 </head>
 
 <body>
+  <div class="popup__wrap" id="orderAccess">
+    <div class="popup popup_s">
+      <div class="popup__close"></div>
+      <span class="text">
+        Заявка принята, мы с вами обязательно свяжемся.
+      </span>
+    </div>
+  </div>
+
+  <div class="popup__wrap" id="orderPopup">
+    <form class="popup">
+      <div class="popup__close"></div>
+      <span class="title title_h3">Оставьте заявку</span>
+      <div class="input__wrap">
+        <label for="ordName" class="input__label">Имя</label>
+        <input type="text" name="ordName" class="input" id="ordName">
+      </div>
+      <div class="input__wrap">
+        <label for="ordEmail" class="input__label">Электронная почта</label>
+        <input type="email" name="ordEmail" class="input" id="ordEmail">
+      </div>
+      <div class="input__wrap">
+        <label for="ordPhone" class="input__label">Телефон</label>
+        <input type="text" name="ordPhone" class="input" id="ordPhone">
+      </div>
+      <div class="input__wrap">
+        <label for="ordComment" class="input__label">Комментарий</label>
+        <textarea name="ordComment" class="input input_area" id="ordComment"></textarea>
+      </div>
+
+      <div class="checkbox__wrap">
+        <input type="checkbox" class="checkbox" id="ordAgree">
+        <label for="ordAgree" class="checkbox"></label>
+        <label for="ordAgree" class="checkbox__label">Даю согласие на <a href="terms.html">обработку данных</a></label>
+      </div>
+
+      <input type="submit" class="btn btn_dark" value='Отправить' style="margin-top: 16px;">
+    </form>
+  </div>
+
   <header class="head">
     <div class="grid head__grid">
       <div class="head__wrap">
@@ -17,6 +57,10 @@
         <span class="text text_light">8 812 779-13-79</span>
       </div>
       <div class="head__line"></div>
+
+      <input type="checkbox" id="mobNav" />
+      <label for="mobNav" class="head__trigger"></label>
+
       <nav class="head__nav">
         <a href="solutions.html">Решения</a>
         <a href="decree.html">Приказы</a>
@@ -39,11 +83,135 @@
 
   <section class="banner banner_product">
     <div class="grid banner__grid">
-      <h1 class="title title_h1 title_light">
-        Системы пассивного перехвата местоположения и SMS
-      </h1>
+      <h1 class="title title_h1 title_light">Системы пассивного перехвата местоположения и SMS</h1>
     </div>
   </section>
+
+  <main class="main main_product">
+    <div class="grid main__grid">
+      <div class="main__item main__item_img">
+        <div class="main__img">
+          <img src="./images/solution__item-xsm-mux.png" alt="#">
+        </div>
+
+        <div class="main__content">
+          <h2 class="title title_h2">Описание</h2>
+          <p class="text">
+            — Приказ №70
+            <br /> — Приказ № 268
+            <br />
+            <br /> Сертифицированное решение с положительным заключением ЦНИИС, которое решает задачи:
+            <br />
+            <br /> — подключение одного ПУ к нескольким станциям;
+            <br /> — подключение одной станции к нескольким ПУ;
+            <br /> — подключение нескольких станций к нескольким ПУ;
+            <br /> — конвертации приказа СОРМ № 70 в формат приказа СОРМ № 268.
+            <br />
+            <br /> С помощью XSM.MUX также создаются крупные кластерные мультиплексоры на большое количество потоков Е1.
+          </p>
+          <a href="#" class="btn btn_dark" id="openOrderPopup">Заказать</a>
+        </div>
+      </div>
+
+      <div class="main__item">
+        <div class="main__content">
+          <h2 class="title title_h2">Возможности</h2>
+          <p class="text">
+            Обработка запросов от ПУ.<br /> Отправка команд на СОРМ соответствующей АТС.<br /> Пересылка сообщений СОРМ и проключение голоса в соответствии с запросами ПУ СОРМ.
+            <br />
+            <br /> XSM.MUX маршрутизирует команды и сообщения в сети СОРМ и концентрирует голосовые каналы (КСЛ). XSM.MUX распределяет и обрабатывает команды СОРМ и ответные сообщения в соответствии с установленными правилами и правами доступа.
+            <br />
+            <br /> Применение XSM.MUX позволяет сократить число трактов Е1 до ПУ ОРМ, в то время как ПУ ОРМ получает независимый доступ к информации СОРМ на подключенных к нему АТС.
+            <br />
+            <br /> Поддерживает два режима мультиплексирования команд и сообщений:
+            <br />
+            <br /> — по номеру СОРМ;
+            <br /> — по номеру абонента.
+          </p>
+        </div>
+      </div>
+
+      <div class="main__item main__item_img">
+        <div class="main__content">
+          <h2 class="title title_h2">Варианты применения</h2>
+        </div>
+
+        <div class="main__content">
+          <p class="text">Конвертер приказов СОРМ (КПС)</p>
+        </div>
+
+        <div class="main__img">
+          <img src="./images/xsm-mux-1.png" alt="#">
+        </div>
+
+        <div class="main__content">
+          <p class="text">Мультиплексор СОРМ (MUX)</p>
+        </div>
+
+        <div class="main__img">
+          <img src="./images/xsm-mux-2.png" alt="#">
+        </div>
+
+        <div class="main__content">
+          <p class="text">Демультиплексор СОРМ (DEMUX)</p>
+        </div>
+
+        <div class="main__img">
+          <img src="./images/xsm-mux-3.png" alt="#">
+        </div>
+
+        <div class="main__content">
+          <p class="text">MUX/DEMUX</p>
+        </div>
+
+        <div class="main__img">
+          <img src="./images/xsm-mux-4.png" alt="#">
+        </div>
+
+        <div class="main__content"></div>
+      </div>
+
+      <div class="main__item">
+        <div class="main__content">
+          <h2 class="title title_h2">Технические характеристики</h2>
+          <p class="text">
+            <h3 class="title title_h3">1U исполнение</h3>
+            — Общее количество ТС ОРМ, которые можно подключить устройству: не больше 7.<br /> — Общее количество ПУ ОРМ, которое можно подключить к устройству: не больше 7.<br /> — Максимальное количество подключаемых потоков Е1: не больше 8.<br /> —
+            Конструктивное исполнение: 19’’1U 45×493×304 мм (ВхШхГ).<br /> — Интерфейс подключения к АТС и ПУ ОРМ: симметричный, 120 Ом (рекомендация ITU-T G.703).<br /> — Скорость цифрового потока для одного тракта Е1: 2048 кбит/с.<br /> — Линейный код
+            тракта Е1: HDB3.<br /> — Интерфейс оборудования для подключения к сети управления: Ethernet 10/100 Base-T.<br /> — Электропитание:<br /> ~220 В 47-63 Гц;<br /> -48 В (-10/+15%);<br /> -60 В(-10/+15%).<br /> — Энергопотребление: не более 50 Вт.
+            <br />
+            <br />
+            <h3 class="title title_h3">7+2U исполнение</h3>
+            XSM.MUX состоит из корзины с установленными платами Consul (7U), промышленного сервера с установленным ПО XSM.MUX (1U) и сетевого коммутатора (1U). В качестве сервера XSM.MUX можно использовать виртуальную машину из инфраструктуры оператора. В качестве
+            сетевого коммутатора можно использовать коммутатор из сети оператора связи.
+            <br />
+            <br /> Технические характеристики корзины:
+            <br />
+            <br /> — Максимальное количество плат Сonsul на одно шасси: не более 12<br /> — Количество потоков Е1 на 1 плату Consul: 2/4/8 Е1<br /> — Максимальное количество потоков Е1 на одно шасси: не более 96<br /> — Конструктивное исполнение: 19’’
+            7U 315×493×300 мм (ВхШхГ).<br /> — Интерфейс подключения к АТС и ПУ ОРМ: симметричный, 120 Ом (рекомендация ITU-T G.703).<br /> — Скорость цифрового потока для одного тракта Е1: 2048 кбит/с.<br /> — Линейный код тракта Е1: HDB<br /> — Интерфейс
+            оборудования для подключения к сети управления: Ethernet 10/100 Base-T.<br /> — Электропитание:<br /> 48 В (-10/+15%);<br /> 60 В(-10/+15%).
+            <br /> — Энергопотребление: не более 50 Вт на одну плату Consul, не более 15 Вт на блок вентиляторов.<br /> — Охлаждение: встроенный в корзину блок вентиляторов.
+            <br />
+            <br /> Организация каналов передачи данных между элементами сетевого СОРМ и XSM.MUX происходит по внутрисетевому протоколу с оптимизацией сетевых ресурсов. Базируется на требованиях к формату сообщений, определяемых Приказом Госкомсвязи России
+            № 70 и Приказом Минкомсвязи России № 268.
+            <br />
+            <br /> Создание контрольно-соединительных линий (КСЛ) между оборудованием СОРМ XSM.MUX и ПУ, а также между элементами сетевого СОРМ происходит по потокам Е1 или по IP-транкам. Взаимодействие концентратора со станциями идет по стандартному
+            интерфейсу СОРМ (тракт E1, КПД по каналам 30 и 31 или по TCP/IP).<br />
+          </p>
+        </div>
+      </div>
+
+      <div class="main__item main__item_img">
+        <div class="main__content">
+          <h2 class="title title_h2">Сертификаты</h2>
+        </div>
+        <div class="main__img">
+          <img src="#" alt="тут сертификат">
+        </div>
+      </div>
+
+    </div>
+  </main>
 
   <footer class="footer">
     <div class="grid footer__grid">
@@ -64,24 +232,25 @@
         </div>
 
         <div class="footer__block">
-          <a href="solutions.html">Решения</a>
-          <a href="decree.html">Приказы</a>
-          <a href="order.html">Заказать</a>
+          <a href="#">Решения</a>
+          <a href="#">Приказы</a>
+          <a href="#">Заказать</a>
         </div>
 
         <div class="footer__block">
-          <a href="support.html">Техподдержка</a>
-          <a href="certificates.html">Сертификаты</a>
-          <a href="about.html">О нас</a>
+          <a href="#">Техподдержка</a>
+          <a href="#">Сертификаты</a>
+          <a href="#">О нас</a>
         </div>
       </div>
       <div class="footer__line"></div>
       <div class="footer__wrap">
         <span class="text text_xs text_light">NEOS — 2021. Все права защищены.</span>
-        <a class="text text_xs text_light" href="terms.html">Политика обработки персональных данных</a>
+        <a class="text text_xs text_light" href="#">Политика обработки персональных данных</a>
       </div>
     </div>
   </footer>
+
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </body>
