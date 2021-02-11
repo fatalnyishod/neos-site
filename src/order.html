@@ -45,11 +45,10 @@
     </div>
   </section>
 
-
   <main class="main">
     <div class="grid main__grid">
       <div class="main__item">
-        <form class="main__content main__content_form">
+        <form class="main__content main__content_form" id="orderForm">
           <div class="title title_h2">Форма заказа оборудования</div>
           <div class="input__wrap">
             <label for="orderName" class="input__label">Как вас зовут</label>
@@ -147,7 +146,11 @@
           <div class="input__wrap">
             <input class="btn btn_dark" type="submit" value="Отправить" />
           </div>
-      </div>
+        </div>
+
+        <div id="orderFormRes" style="display: none;">
+            <p class="text">Заявка принята, мы с вами обязательно свяжемся.</p>
+        </div>
       </form>
     </div>
     </div>

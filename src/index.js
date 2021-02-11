@@ -197,6 +197,11 @@ $(document).keyup(function(e) {
   }
 });
 
+$('#orderForm').on('submit', function() {
+    $(this).css('display', 'none');
+    $('#orderFormRes').css('display', 'block');
+});
+
 $('form').on('submit', async function() {
   event.preventDefault();
 
