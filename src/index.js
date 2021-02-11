@@ -202,6 +202,11 @@ $('#orderForm').on('submit', function() {
     $('#orderFormRes').css('display', 'block');
 });
 
+$('#supportForm').on('submit', function() {
+    $(this).css('display', 'none');
+    $('#supportFormRes').css('display', 'block');
+});
+
 $('form').on('submit', async function() {
   event.preventDefault();
 

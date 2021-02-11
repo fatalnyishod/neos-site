@@ -56,7 +56,7 @@
       </div>
 
       <div class="main__item main__item_support">
-        <form class="main__content main__content_form">
+        <form class="main__content main__content_form" id="supportForm">
           <div class="title title_h2">Оставьте заявку</div>
           <div class="input__wrap">
             <label for="supportName" class="input__label">Как вас зовут</label>
@@ -101,9 +101,13 @@
           <div class="input__wrap">
             <input class="btn btn_dark" type="submit" value="Отправить" />
           </div>
-      </div>
-      </form>
-    </div>
+        </form>
+
+        <div id="supportFormRes" style="display: none;">
+            <p class="text">Заявка принята, мы с вами обязательно свяжемся.</p>
+        </div>
+
+        </div>
     </div>
   </main>
 
