@@ -200,6 +200,10 @@ $(document).keyup(function(e) {
 $('form').on('submit', async function() {
   event.preventDefault();
 
+  if($(this).hasClass('popup')) {
+      $('.popup__wrap').toggleClass('active');
+  }
+
   const fields = $(this).serializeArray(),
     formData = new FormData();
 
